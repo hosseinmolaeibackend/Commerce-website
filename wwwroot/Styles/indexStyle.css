@@ -1,0 +1,17 @@
+#carouselExampleIndicators img{
+     width: 100% !important;
+}
+li{
+     list-style-type: none;
+}
+.txt:hover{
+     text-decoration-color: chocolate;
+     text-decoration-line: underline;
+     text-decoration-thickness: 3px ;
+}
+.fontSizeForFooterIcon{
+     font-size: 2em !important;
+}
+#header{
+     background-color: #4CC9F0;
+}

@@ -1,0 +1,28 @@
+#sidebarProducts > ul>li>a{
+     text-decoration: none;
+     color: rgb(223, 228, 232);
+     margin: 1% 0%;
+   }
+#sidebarProducts{
+     background-color: rgb(87, 73, 100);
+}
+#sidebarProducts h2{
+     color: rgb(223, 228, 232);
+}
+.btns{
+     display: none;
+     transition-duration:  600ms hover;
+   }
+   .card:hover .btns{
+     display: flex;
+   }
+   .card:hover{
+     scale: 1.02;
+     transition-delay: 600ms;
+   }
+#NavbarFilterProducts{
+     background-color: rgb(218, 214, 221);
+}
+#sidbarBrands{
+     background-color: rgb(218, 214, 221);
+}

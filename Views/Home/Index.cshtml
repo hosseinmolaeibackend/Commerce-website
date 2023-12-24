@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<partial name="~/Views/Partial/Poster.cshtml" />
+<div class="container my-5">
+    <div class="d-flex flex-row justify-content-around col-12">
+        <!--Start Slider-->
+        <partial name="~/Views/Partial/Slider.cshtml"/>
+       
+        <!--End Slider-->
+        <!-- Start Top Card-->
+        <partial name="~/Views/Partial/SummeryProduct.cshtml" />
+        <!-- End Top Card-->
+    </div>
+    <!--main Start-->
+    <main>
+        <!--Start Filter Product-->
+        <div class="d-none d-md-flex flex-row fw-bolder justify-content-evenly">
+            <p class="pt-1">
+                New Product
+            </p>
+            <hr style="height: 3px; background-color: aqua; width: 75%;">
+            <ul class="d-flex flex-row">
+                <li class="fw-bolder me-2 txt">all </li>
+                <li class="fw-bolder me-2 txt">item1 </li>
+                <li class="fw-bolder txt">item2 </li>
+            </ul>
+        </div>
+        <!--End Filter Product-->
+        <div class="mt-4 mt-md-0"></div>
+       <!-- Second Summery Product -->
+        <partial name="~/Views/Partial/TwoSummeryProduct.cshtml"/>
+    </main>
+</div>

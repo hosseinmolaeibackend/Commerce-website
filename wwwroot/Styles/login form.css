@@ -1,0 +1,15 @@
+﻿body {
+    color: #fff;
+    background-image: url(image/sunset-lake-dusk-purple-sky-reflection-dawn-body-of-water-1920x1080-329.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.inputBackground {
+    background: rgb(255, 255, 255,0.2) !important;
+}
+
+nav, footer {
+    display: none;
+}

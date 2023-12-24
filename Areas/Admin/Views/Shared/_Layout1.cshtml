@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Admin/img/logo/logo.png" rel="icon">
+    <link href="~/Admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="~/Admin/css/ruang-admin.min.css" rel="stylesheet">-->
+     <title>RuangAdmin - Blank Page</title>
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    @Html.Partial("_SideBarAdmin")
+    <!-- Sidebar -->
+    <partial name="~/Views/_SideBarAdmin"/>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            @await Component.InvokeAsync("SiteHeaderAdmin")
+            <!---Container Fluid-->
+            @RenderBody()
+        </div>
+        <!-- Footer -->
+        @await Component.InvokeAsync("SiteFooterAdmin")
+        <!-- Footer -->
+    </div>
+</div>
+
+<!-- Scroll to top -->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<script src="~/Admin/vendor/jquery/jquery.min.js"></script>
+<script src="~/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="~/Admin/js/ruang-admin.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+﻿
+@section Style{
+    <link href="~/styles/indexstyle.css" rel="stylesheet" />
+    <link href="~/styles/productsindexstyle.css" rel="stylesheet" />
+}
+
+<main class=" d-flex flex-row justify-content-between  container">
+    <!--Catagory sidbar start-->
+    <aside id="Sidebar" class="d-none d-md-flex flex-column  p-3 w-100">
+        <div id="sidebarProducts" class="rounded-3 mb-3">
+            <h2 class=" fw-bolder my-4 ms-4">Category</h2>
+            <ul class="px-4">
+                <li class="d-flex flex-row justify-content-between"><a href="">Breathalyzers </a><span class="me-2 text-light">18</span></li>
+                <li class="d-flex flex-row justify-content-between"><a href="">Calculators </a><span class="me-2 text-light">20</span></li>
+                <li class="d-flex flex-row justify-content-between"><a href="">Translators </a><span class="me-2 text-light">157</span></li>
+                <li class="d-flex flex-row justify-content-between"><a href="" class="text-dark">VR Headsets </a><span class="me-2 text-light">14</span></li>
+                <li class="d-flex flex-row justify-content-between"><a href="">Digital Clocks </a><span class="me-2 text-light">57</span></li>
+                <li class="d-flex flex-row justify-content-between"><a href="">Laser Pointers </a><span class="me-2 text-light">202</span></li>
+            </ul>
+        </div>
+        <!--Brand Filter-->
+        <div id="sidbarBrands" class="rounded-3">
+            <h2 class="fw-bolder my-4 ms-4">BRAND</h2>
+            <!--Check Input-->
+            <div id="checkInput" class="px-4 py-2">
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Apple
+                        </label>
+                    </div>
+                    <span class="d-flex align-self-end">18</span>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            HTC
+                        </label>
+                    </div>
+                    <span class="d-flex align-self-end">20</span>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Samsung
+                        </label>
+                    </div>
+                    <span class="d-flex align-self-end">19</span>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Sony
+                        </label>
+                    </div>
+                    <span class="d-flex align-self-end">56</span>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Huawi
+                        </label>
+                    </div>
+                    <span class="d-flex align-self-end">22</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!--Catagory sidbar end-->
+    <div class="d-flex flex-column col-12 col-md-8 pe-3">
+        <h1 class="fs-1 fw-bolder mt-5">Products <span class="text-muted fw-light fs-3">(1,102)</span></h1>
+        <!--Start Navbar filter-->
+        <nav id="NavbarFilterProducts" class="d-flex flex-row flex-wrap mt-2 mb-5 py-2 rounded-3  justify-content-around">
+            <button id="AllBtn" class="btn btn-outline-dark rounded-pill fw-bold opacity-75">All</button>
+            <button id="PopularBtn" class="btn btn-outline-dark rounded-pill fw-bold opacity-50">Popular</button>
+            <button id="SelerBtn" class="btn btn-outline-dark rounded-pill fw-bold opacity-50">Best Seler</button>
+            <button id="CheapestBtn" class="btn btn-outline-dark rounded-pill fw-bold opacity-50">Cheapest</button>
+            <button id="DiscountBtn" class="btn btn-outline-dark rounded-pill fw-bold opacity-50">Discount</button>
+        </nav>
+        <!--End Navbar filter-->
+        <!--Start Article tag-->
+        <article id="ArtilceProductsGroup">
+            <div class="card-group">
+                <div class="card mx-2 border rounded-4">
+                    <img class="card-img-top rounded-4" src="~/Images/Product/Ps5VR.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Sony Playstation VR</h4>
+                        <p class="card-text text-center">$300.00 <span class="text-muted text-decoration-line-through">$400.00</span></p>
+                        <div class=" flex-row justify-content-between btns">
+                            <div class="pt-2 col-9"><a href="#" class="btn btn-outline-dark w-100"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a></div>
+                            <a href="" class="p-2 fs-4"><i class="fa fa-balance-scale" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-2 border rounded-4">
+                    <img class="card-img-top rounded-4" src="~/Images/Product/Ps5VR.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <h4 class="card-title text-center">Sony Playstation VR</h4>
+                        <p class="card-text text-center">$300.00 <span class="text-muted text-decoration-line-through">$400.00</span></p>
+                        <div class=" flex-row justify-content-between btns">
+                            <div class="pt-2 col-9"><a href="#" class="btn btn-outline-dark w-100"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a></div>
+                            <a href="" class="p-2 fs-4"><i class="fa fa-balance-scale" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-2 border rounded-4">
+                    <img class="card-img-top rounded-4" src="~/Images/Product/Ps5VR.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <h4 class="card-title text-center">Sony Playstation VR</h4>
+                        <p class="card-text text-center">$300.00 <span class="text-muted text-decoration-line-through">$400.00</span></p>
+                        <div class=" flex-row justify-content-between btns">
+                            <div class="pt-2 col-9"><a href="#" class="btn btn-outline-dark w-100"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a></div>
+                            <a href="" class="p-2 fs-4"><i class="fa fa-balance-scale" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-group my-3">
+                <div class="card mx-2 border rounded-4">
+                    <img class="card-img-top rounded-4" src="~/Images/Product/Ps5VR.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Sony Playstation VR</h4>
+                        <p class="card-text text-center">$300.00 <span class="text-muted text-decoration-line-through">$400.00</span></p>
+                        <div class=" flex-row justify-content-between btns">
+                            <div class="pt-2 col-9"><a href="#" class="btn btn-outline-dark w-100"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a></div>
+                            <a href="" class="p-2 fs-4"><i class="fa fa-balance-scale" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-2 border rounded-4">
+                    <img class="card-img-top rounded-4" src="~/Images/Product/Ps5VR.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <h4 class="card-title text-center">Sony Playstation VR</h4>
+                        <p class="card-text text-center">$300.00 <span class="text-muted text-decoration-line-through">$400.00</span></p>
+                        <div class=" flex-row justify-content-between btns">
+                            <div class="pt-2 col-9"><a href="#" class="btn btn-outline-dark w-100"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a></div>
+                            <a href="" class="p-2 fs-4"><i class="fa fa-balance-scale" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-2 border rounded-4">
+                    <img class="card-img-top rounded-4" src="./Images/Product/Ps5VR.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <h4 class="card-title text-center">Sony Playstation VR</h4>
+                        <p class="card-text text-center">$300.00 <span class="text-muted text-decoration-line-through">$400.00</span></p>
+                        <div class=" flex-row justify-content-between btns">
+                            <div class="pt-2 col-9"><a href="#" class="btn btn-outline-dark w-100"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a></div>
+                            <a href="" class="p-2 fs-4"><i class="fa fa-balance-scale" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        <!--End Article tag-->
+    </div>
+</main>

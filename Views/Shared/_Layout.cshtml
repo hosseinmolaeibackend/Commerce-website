@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @RenderSection("Style", false)
+     <link rel="stylesheet" href="~/Styles/indexStyle.css">
+     <link rel="stylesheet" href="~/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+     <title>Home  Page</title>
+</head>
+<body>
+<!--Start Header-->
+@await Component.InvokeAsync("SiteHeader")
+<!--End Header-->
+<!--Start Body-->
+@RenderBody()
+<!--End Body-->
+<hr>
+<!--Start Footer-->
+@await Component.InvokeAsync("SiteFooter")
+<!--End Footer-->
+<!--Start Script-->
+<script src="~/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+@RenderSection("Script", false)
+<!--End Script-->
+</body>
+</html>
