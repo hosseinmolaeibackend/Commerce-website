@@ -1,0 +1,51 @@
+﻿@model Test.Models.Article.ArticleModel
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="col-lg-10 ms-3">
+  <div class="card mb-4">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h6 class="m-0 font-weight-bold text-primary">Edit Article </h6>
+    </div>
+    <form asp-area="Admin" asp-controller="Article" asp-action="Creat" method="post"
+          enctype="multipart/form-data"
+          class="d-flex flex-column align-items-center mb-4">
+      <div class="card-body">
+        <p>Simple and easy select a time for a text input using your mouse.</p>
+        <div class="form-group" id="simple-date1">
+          <label for="Title">Title</label>
+          <div class="input-group date">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-heading"></i></span>
+            </div>
+            <input type="text" class="form-control" asp-for="Title">
+          </div>
+        </div>
+        <div class="form-group" id="simple-date2">
+          <label for="TimeRead">Time Read</label>
+          <div class="input-group date">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-times-circle"></i></span>
+            </div>
+            <input type="number" class="form-control"  asp-for="TimeRead">
+          </div>
+        </div>
+        <div class="form-group" id="simple-date3">
+          <label for="decadeView">Description</label>
+          <div class="input-group date">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-info"></i></span>
+            </div>
+           <textarea id="tiny" asp-for="Description">
+             Welcome to TinyMCE!
+           </textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-success"> Create </button>
+        <p>For documentations Bootstrap Datepicker you can visit <a href="https://github.com/uxsolutions/bootstrap-datepicker" target="_blank">here.</a></p>
+      </div>
+    </form>
+  </div>
+</div>

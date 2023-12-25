@@ -1,0 +1,26 @@
+﻿@model Test.Models.Article.ArticleModel
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="card col-10  mb-3" style="margin-left: 8% !important; ">
+            <div class="card-header">
+                <h1>@Model.Title</h1>
+            </div>
+            <div class="ps-2">
+                <h5 class="card-title">Article Detail</h5>
+            </div>
+            <img src="~/Images/about-us-image.jpg" width="250px" height="250px" class="card-img-top rounded-3" alt="...">
+            <div class="card-body">
+                <p class="ms-2 mb-2">
+                    @Html.Raw(Model.Description)
+                </p>
+                <div class="d-flex flex-row justify-content-around col-8 mb-2" >
+                    <p class="text-capitalize">Create Time:  @Model.CreateTime</p>
+                    <p class="text-capitalize">Time Read:  @Model.TimeRead</p>
+                    <p class="text-capitalize">Creator id: @Model.UserId </p>
+                </div>
+              <a asp-controller="Article" asp-action="Edit" asp-route-id="@Model.ArticleId" class="btn btn-primary">Go To Edit</a>
+            </div>
+          </div>
