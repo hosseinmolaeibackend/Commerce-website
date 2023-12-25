@@ -11,7 +11,9 @@ namespace Test.ViewModels
         [Display(Name = "Description")]
         [Required(ErrorMessage = "enter the '{0}' ")]
         public string Description { get; set; }
-        public string? Image { get; set; }
+
+        public IFormFile? Image { get; set; }
+        public string? ImageName { get; set; }
 
         [Display(Name = "Date time")]
         [Required(ErrorMessage = "enter the '{0}' ")]

@@ -31,5 +31,15 @@
             ProductImageThumbnailServerPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/content/images/products/thumbs/");
 
         #endregion
+        
+        #region article
+
+        public static string ArticleImage = "/content/images/articles/";
+        public static string ArticleImageServerPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/content/images/articles/");
+        public static string ArticleImageThumbnail = "/content/images/articles/thumbs/";
+        public static string
+            ArticleImageThumbnailServerPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/content/images/articles/thumbs/");
+
+        #endregion
     }
 }
