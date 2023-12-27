@@ -1,0 +1,16 @@
+﻿@model Test.Models.Article.ArticleModel
+
+@{
+    Layout = null;
+}
+
+<form asp-controller="Article" asp-action="Delete" asp-route-Id="@Model.ArticleId" method="post">
+    <div class="d-flex flex-column">
+        <h4>@Model.Title</h4>
+        <p class="text">
+            @Html.Raw(Model.Description)
+        </p>
+        <img src="@Model.Image" alt="..." width="250px" height="250px" />
+    </div>
+    <input type="submit" value="Delete" class="btn btn-sm btn-danger"/>
+</form>
