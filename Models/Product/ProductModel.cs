@@ -12,7 +12,8 @@ namespace Test.Models.Product
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
-
+        public decimal Price { get; set; }
+        public int Count { get; set; }
         public int UserId { get; set; }
         public UserModel UserModel { get; set; }
 

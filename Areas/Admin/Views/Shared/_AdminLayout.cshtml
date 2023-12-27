@@ -28,6 +28,7 @@
     <!-- Footer -->
     @await Component.InvokeAsync("SiteFooterAdmin")
     <!-- Footer -->
+    <script src="https://cdn.tiny.cloud/1/zyv2fmk1rs1v8o9rvjix2f4i4rt9msqw46nirnbgtiep1w1j/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
       tinymce.init({
         selector: 'textarea#tiny',
@@ -47,5 +48,6 @@
 <script src="~/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="~/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="~/Admin/js/ruang-admin.min.js"></script>
+@RenderSection("Scripts",false)
 </body>
 </html>

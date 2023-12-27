@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Net;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Test.Context;
@@ -103,7 +104,14 @@ namespace Test.Areas.Admin.Controllers
         {
             var existArticle = _db.ArticleModels.SingleOrDefault(a => a.ArticleId == Id);
             if (existArticle == null) return NotFound();
-            return View(existArticle);
+            var editarticle = new EditArticleVm
+            {
+                Title = existArticle.Title,
+                Description = existArticle.Description,
+                TimeRead = existArticle.TimeRead,
+                ImageName = existArticle.Image
+            };
+            return View(editarticle);
         }
 
         [HttpPost, ValidateAntiForgeryToken]
@@ -119,16 +127,21 @@ namespace Test.Areas.Admin.Controllers
                 existArticle.TimeRead = editArticleVm.TimeRead;
                 existArticle.UserId = Convert.ToInt32(userid);
                 existArticle.CreateTime = DateTime.Now;
-                string ImageName = Guid.NewGuid().ToString("N")
-                                   + Path.GetExtension(editArticleVm.Image.FileName);
-                if (ImageName != existArticle.Image)
+               
+                if (editArticleVm.Image!=null)
                 {
-                    editArticleVm.Image.AddImageToServer(ImageName,
-                        PathTools.ArticleImageServerPath, 75, 75, PathTools.ArticleImageThumbnailServerPath,
-                        editArticleVm.ImageName);
-                    editArticleVm.ImageName = ImageName;
+                    string ImageName = Guid.NewGuid().ToString("N")
+                                       + Path.GetExtension(editArticleVm.Image.FileName);
+                    if (editArticleVm.ImageName != ImageName)
+                    {
+                        editArticleVm.Image.AddImageToServer(ImageName,
+                            PathTools.ArticleImageServerPath, 75, 75, PathTools.ArticleImageThumbnailServerPath,
+                            editArticleVm.ImageName);
+                        editArticleVm.ImageName = ImageName;
+                        existArticle.Image = editArticleVm.ImageName;
+                    }
+                  
                 }
-
                 _db.ArticleModels.Update(existArticle);
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index", "Article", new { area = "Admin" });
@@ -140,7 +153,19 @@ namespace Test.Areas.Admin.Controllers
         #endregion
 
         #region Delete
+        [HttpGet]
         public  IActionResult Delete(int Id)
+        {
+            if (Id ==null)
+                return NotFound();
+            var article = _db.ArticleModels.SingleOrDefault(a => a.ArticleId == Id);
+            if (article ==null) 
+                return NotFound();
+            return PartialView(article);
+        }
+        [HttpPost,ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public  IActionResult DeleteConfrimed(int Id)
         {
             var existArticle = _db.ArticleModels.SingleOrDefault(a => a.ArticleId == Id);
             if (existArticle == null) return NotFound();
@@ -150,4 +175,6 @@ namespace Test.Areas.Admin.Controllers
         }
         #endregion
     }
+
+
 }
